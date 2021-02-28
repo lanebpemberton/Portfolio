@@ -1,0 +1,113 @@
+/* import fonts */
+@font-face {
+    font-family: 'Exo';
+    src: url('./Fonts/Exo-Regular.ttf')  format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Exo';
+    src: url('./Fonts/Exo-Medium.ttf')  format('truetype');
+    font-weight: medium;
+    font-style: normal;
+  } 
+
+/* setup custom css variables */
+:root {
+    --padding-text-left:2%;
+    --padding-text-right:2%;
+    --padding-around: 1%;
+    --primary-color:#546e7a;
+    --primary-light-color:#819ca9;
+    --background-color: #F5F5F5;
+  }
+
+/* reset css elements */
+* { 
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Exo','sans-serif';
+    background-color: var(--background-color);
+}
+
+/* use variables setup in root to maintain application consistency and dry code */
+.header{
+    padding: var(--padding-around);
+    background-color: var(--primary-color);
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    width: 50%;
+}
+
+
+
+.logo, .header nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: var(--padding-text-left);
+    padding-right: var(--padding-text-right);
+}
+
+h1 {
+    color: white;
+    font-weight: medium;
+}   
+
+.normalFontWeight{
+    font-weight: normal;
+}
+
+.header nav {
+    justify-content: flex-end;
+}
+
+@media (max-width: 750px) {
+    .header nav {
+        justify-content: center;
+        width: 100%;
+    }
+    .logo {
+        justify-content: center;
+        width: 100%;
+    }
+  }
+
+h2{
+    color: white;
+    font-weight: normal;
+}
+
+.headerLink {
+    padding:4%
+}
+
+a {
+    color: inherit;
+    text-decoration: none; /* no underline */
+}
+
+.mainBanner img{
+    height: 500px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(100%);
+}
+
+.lightPanel {
+    background-color: var(--primary-light-color);
+    width: 100%;
+    height: 200px
+}
