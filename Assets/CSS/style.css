@@ -184,8 +184,9 @@ p {
 }
 
 .lightPanel {
+    display: inline-block;
     background-color: var(--primary-light-color);
-    height: 1000px;
+    height: 1200px;
     width: 100%;
 }
 
@@ -208,7 +209,7 @@ p {
     object-fit:cover;
 }
 
-#mainProject {
+#mainProject img{
     height: 450px;
 }
 
@@ -225,13 +226,19 @@ p {
     /* transform: translate(-50%, -50%); */
     background-color: white;
     width:30%;
-    height: 20%;
+    height: 50px;
     opacity: 0.6;
     padding-left: 10px;
     font-size: 22px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     display: inline-block;
+}
+
+@media (max-width: 960px) {
+    .projectTitle {
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 70px;
+        width: 6px;0%;
+}
 }
 
